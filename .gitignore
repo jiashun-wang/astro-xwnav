@@ -25,5 +25,5 @@ pnpm-debug.log*
 /src/pages/robots.txt.ts
 /src/components/LogoName.astro
 /src/data/navLinks.js
-/public/
+# /public/
 astro.config.mjs
