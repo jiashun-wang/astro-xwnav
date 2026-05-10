@@ -39,7 +39,7 @@
 
 ## 🌟 独特优势
 
-- 🤖 自动化功能，让您只需专注于内容管理而非技术细节,只需修改一个数据文件`src/data/navLinks.js`，所有功能都会自动更新，极大简化了维护工作
+- 🤖 自动化功能，让您只需专注于内容管理而非技术细节,只需修改一个数据文件 `src/data/navLinks.js`，所有功能都会自动更新，极大简化了维护工作
 
 ### 自动化功能
 
@@ -55,24 +55,30 @@
 - **📝 自动SEO元数据**：每次构建项目自动生成和管理SEO相关的元标签等等代码
 
 ## 🟢自动化生成的灯塔情况[PageSpeed Insights](https://pagespeed.web.dev/)
+
 ![4ceed547f12b6e7753b8f776090abed3.png](https://i.miji.bid/2025/06/11/4ceed547f12b6e7753b8f776090abed3.png)
 
 ## 🎶 部署指南`总共六步 (git拉取➡️安装环境➡️自定义网站➡️更新数据文件➡️图标脚本➡️部署)
 
 ### ✅ git 拉取
+
 - `git clone https://github.com/zywe03/astro-xwnav.git`(或者下载压缩包源码解压)
 
 ### ✅ windowns安装Node.js 环境
+
 - 安装 **Node.js 18.0+** (推荐LTS版本)[官网](https://nodejs.org/zh-cn)
 - Windows用户：直接从官网下载安装包
 
 ### ✅ 包管理器选择
+
 - **启用 pnpm**（轻量、高效）
   ```bash
   corepack enable
   corepack prepare pnpm@latest --activate
   ```
+
 ### ✅ 开始开发
+
 ```
 # 安装依赖
 pnpm i
@@ -83,11 +89,15 @@ npx tsx .\icon-system\0icon.ts
 # 打包构建生成/dist目录
 pnpm build
 ```
+
 ### ✅ 上传/dist目录到服务器,nginx反代,完结撒花🥳
 
 ### 🟢 Vercel自动部署
+
 [![zywe vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zywe03/astro-xwnav-theme)
+
 ### 🟢 Cloudflare Workers自动部署
+
 [![zywe Cloudflare pages](https://deploy.workers.cloudflare.com/button)](https://dash.cloudflare.com/?to=/:account/workers-and-pages/create/deploy-to-workers&repository=https://github.com/zywe03/astro-xwnav-theme)
 
 ### 🛜 第一次导入大量网址链接,借助AI快速生成网站导航内容(强烈建议)
@@ -95,13 +105,14 @@ pnpm build
 **列出想要生成的网站所属分类,名称或网站**,短和长描述让AI生成，节省工作量
 
 AI提示词:
+
 ```
 统一分类opensource
 网站：
 github
 baidu.com
 谷歌
-具体按照以下样式生成，使用“JavaScript风格格式+单引号”，不要添加"icon字段"和"[]""      
+具体按照以下样式生成，使用“JavaScript风格格式+单引号”，不要添加"icon字段"和"[]""    
       {
       id: 'github',
       title: 'GitHub', 
@@ -113,8 +124,9 @@ baidu.com
 
 描述根据网站实际内容,专业,准确,介绍背景独特优势等等,不要太刻板,臃肿,重复
 ```
-插入数据文件`navLinks.js`后
-执行`npx tsx .\icon-system\0icon.ts`自动下载图标,即可完成大量导航网站的导入工作
+
+插入数据文件 `navLinks.js`后
+执行 `npx tsx .\icon-system\0icon.ts`自动下载图标,即可完成大量导航网站的导入工作
 
 ## 🟢如何优雅上传服务器
 
@@ -124,14 +136,16 @@ baidu.com
 
 2. ➡️使用vps作为服务器
 
- 2.1:使用`rsync`，配置一键脚本上传
+ 2.1:使用 `rsync`，配置一键脚本上传
 
  2.2:更新文件，执行脚本，构建，设置好nginx，压缩dist目录，上传后解压，每次更新删除服务器的dist，再传新的压缩包
 
 ## 更新指南
+
 Astro-xwnav 会不定期发布 新功能,修复BUG,维护功能
-- 添加一次上游`git remote add upstream https://github.com/zywe03/astro-xwnav.git`
-- 之后执行`git pull upstream main`即可更新(⚠️ 注意写好`.gitignore文件`避免覆盖数据)
+
+- 添加一次上游 `git remote add upstream https://github.com/zywe03/astro-xwnav.git`
+- 之后执行 `git pull upstream main`即可更新(⚠️ 注意写好 `.gitignore文件`避免覆盖数据)
 
 ## 🎥 项目核心结构
 
@@ -168,9 +182,11 @@ dh_web/
 ### 💬 日常使用关键文件和目录说明
 
 #### 核心数据文件
+
 - **src/data/navLinks.js**: 存储所有网站数据和分类信息，是最常修改的文件，包含网站信息和分类定义
 
 #### 图标存储
+
 - **public/icons/**: 存储所有网站图标
 - **public/icons/category/**: 存储分类图标
 - **public/icons/downloaded_sites/**: 临时下载目录（自动清理）
@@ -221,6 +237,7 @@ export const sites = [
 ```
 
 #### 网站和分类排序
+
 - ➡️一句话就是调顺序即可排序
 - **分类排序**: 调整 `categories` 数组中分类的顺序即可改变分类的显示顺序
 - **网站排序**: 调整 `sites` 数组中网站的顺序即可改变网站的显示顺序
@@ -228,6 +245,7 @@ export const sites = [
 ### 生成后插入navLinks.js即可
 
 ---
+
 ## 🖼️ 图标下载脚本使用指南
 
 ✅ `navLinks.js`使用“JavaScript风格格式+单引号”，不要添加"icon字段"
@@ -238,22 +256,26 @@ export const sites = [
 
 1. 首先在 `src/data/navLinks.js` 中添加好新网站或分类
 2. 一键执行：
+
 ```bash
 # 终端复制粘贴回车
-npx tsx .\icon-system\0icon.ts
+npx tsx ./icon-system/0icon.ts
 ```
 
 ## 🔗 修改友情链接和按钮
 
-## ✅使用vscode搜索文本`记得修改`可快速找到全部需要自定义的内容(强烈建议已经全部标注好)
+## ✅使用vscode搜索文本 `记得修改`可快速找到全部需要自定义的内容(强烈建议已经全部标注好)
 
 ### 修改友情链接和页脚声明
 
 位于页脚组件中，修改 `src/components/Footer.astro` 文件：
+
 - 点开文件一目了然
+
 ## 修改网站大标题(名称)和logo
 
-修改`src\components\LogoName.astro`
+修改 `src\components\LogoName.astro`
+
 - 独立出来方便修改,点开文件一目了然
 
 ### 修改全部图标
@@ -261,13 +283,16 @@ npx tsx .\icon-system\0icon.ts
 - `default.svg`导航网站三级回退机制保底图标
 - `logo.png`网站社交媒体分享图片
 - `logo.svg`网站主图标
+
 1. 准备您的图标文件(修改图片,但使用固定命名)
 2. 替换图标文件放入 `public\images` 目录即可
 
 ### 提交站点地图
+
 只需要向搜索引擎提交 `https://xxx.com/sitemap-index.xml` 这一个文件
 
 ---
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=zywe03/astro-xwnav&type=Date)](https://www.star-history.com/#zywe03/astro-xwnav&Date)
@@ -276,5 +301,6 @@ npx tsx .\icon-system\0icon.ts
 感谢项目使用的全部API
 Feather,Simple,Iconify,DuckDuckGo,Unavatar,myip.la,openweathermap.org,Clearbit,Logo
 ```
+
 🌟 **Zywe导航站** - 让您的网络世界更有序、更高效！
 意见与反馈可使用📧 联系我：[电子邮箱](mailto:zywe03@qq.com)
