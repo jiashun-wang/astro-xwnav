@@ -1,34 +1,15 @@
 /**
-统一分类opensource
-网站：
-github
-baidu.com
-谷歌
-具体按照以下样式生成，使用“JavaScript风格格式+单引号”，不要添加"icon字段"和"[]""      
-      {
-      id: 'github',
-      title: 'GitHub',
-      description: '全球最大的开源代码托管平台，支持 Git 版本控制，适用于协作开发、项目管理和自动化工作流，是开发者共享与协作的核心工具。'
-      shortDesc: '代码托管平台。',
-      url: 'https://github.com/',
-      category: 'opensource',
-      },
-描述根据网站实际内容,专业,准确,介绍背景独特优势等等,不要太刻板,臃肿,重复
-自动下载图标脚本执行:
-npx tsx icon-system/0icon.ts
-*/
-/**
  * 网站分类列表
  * @type {Array<{id: string, name: string}>}
  */
 export const categories = [
   {
-    id: 'opensource',
-    name: '开源平台', icon: '/icons/category/opensource.svg',
+    id: 'studying',
+    name: '个人站点', icon: '/icons/category/studying.svg',
   },
   {
-    id: 'studying',
-    name: '个人其他站点', icon: '/icons/category/studying.svg',
+    id: 'opensource',
+    name: '开源平台', icon: '/icons/category/opensource.svg',
   },
   {
     id: 'pages',
@@ -46,12 +27,64 @@ export const categories = [
     id: 'learning',
     name: '学习平台', icon: '/icons/category/learning.svg',
   },
+  {
+    id: 'tools',
+    name: '工具与效率', icon: '/icons/category/tools.svg',
+  },
+  {
+    id: 'social',
+    name: '社交与媒体', icon: '/icons/category/social.svg',
+  },
+  {
+    id: 'media',
+    name: '视频平台', icon: '/icons/category/media.svg',
+  },
+  {
+    id: 'design',
+    name: '设计资源', icon: '/icons/category/design.svg',
+  },
+  {
+    id: 'productivity',
+    name: '生产力工具', icon: '/icons/category/productivity.svg',
+  },
+  {
+    id: 'study',
+    name: '学习与考试', icon: '/icons/category/study.svg',
+  },
 ];
 /**
  * 网站列表
  * @type {Array<{id: string, title: string, description: string, shortDesc: string, url: string, category: string}>}
  */
 export const sites = [
+  // 个人站点      
+      {
+      id: 'academic-homepage',
+      title: "Jiashun Wang's Homepage",
+      description: '个人主页与知识集散地。作为技术爱好者，展示自己的全部项目、实践与分享的中心。',
+      shortDesc: "Jiashun Wang's 的学术主页",
+      url: 'https://jia-shun.wang/',
+      category: 'studying',
+      icon: '/icons/academic-homepage.webp',
+      },
+      {
+      id: 'nav-homepage',
+      title: '海之霸学术导航',
+      description: '专属导航页，这里汇聚了学术与技术所需的所有高效工具与资源链接。',
+      shortDesc: '学术与技术网站式收藏夹',
+      url: 'https://chum-bucket.site/',
+      category: 'studying',
+      icon: '/icons/nav-homepage.webp',
+      },
+      {
+      id: 'JiashunWang-Blog',
+      title: '海洋学笔记',
+      description: '海洋学相关的笔记，记录了海洋学领域的最新研究进展、经典理论和实用工具。',
+      shortDesc: '海洋学相关的笔记',
+      url: 'https://blog.chum-bucket.site/',
+      category: 'studying',
+      icon: '/icons/jiashunwang-blog.webp',
+      },
   // 开源平台      
       {
       id: 'github',
@@ -97,34 +130,6 @@ export const sites = [
       url: 'https://bitbucket.org/',
       category: 'opensource',
       icon: '/icons/bitbucket.webp',
-      },
-  // 个人其他站点      
-      {
-      id: 'academic-homepage',
-      title: "Jiashun Wang's Homepage",
-      description: '个人主页与知识集散地。作为技术爱好者，展示自己的全部项目、实践与分享的中心。',
-      shortDesc: "Jiashun Wang's 的学术主页",
-      url: 'https://jia-shun.wang/',
-      category: 'studying',
-      icon: '/icons/academic-homepage.svg',
-      },      
-      {
-      id: 'nav-homepage',
-      title: '海之霸学术导航',
-      description: '专属导航页，这里汇聚了学术与技术所需的所有高效工具与资源链接。',
-      shortDesc: '学术与技术网站式收藏夹',
-      url: 'https://chum-bucket.site/',
-      category: 'studying',
-      icon: '/icons/nav-homepage.svg',
-      },
-      {
-      id: 'JiashunWang-Blog',
-      title: '海洋学笔记',
-      description: '海洋学相关的笔记，记录了海洋学领域的最新研究进展、经典理论和实用工具。',
-      shortDesc: '海洋学相关的笔记',
-      url: 'https://blog.chum-bucket.site/',
-      category: 'studying',
-      icon: '/icons/jiashunwang-blog.webp',
       },
   // 静态部署平台      
       {
@@ -236,6 +241,96 @@ export const sites = [
       category: 'academic',
       icon: '/icons/acm.webp',
       },
+      {
+      id: 'ablesci',
+      title: '研毕导航',
+      description: '一个面向科研人员的导航网站，聚合了各类学术工具、数据库、期刊、软件等资源，旨在提高科研工作效率。',
+      shortDesc: '科研资源导航站。',
+      url: 'https://www.ablesci.com/',
+      category: 'academic',
+      icon: '/icons/ablesci.webp',
+      },
+      {
+      id: 'ablesci_daohang',
+      title: '研毕学术导航',
+      description: '研毕网旗下的学术专用导航页面，深度整合了文献检索、数据库、学术工具等科研全流程所需的核心网站。',
+      shortDesc: '深度学术资源导航。',
+      url: 'https://www.ablesci.com/daohang',
+      category: 'academic',
+      icon: '/icons/ablesci-daohang.webp',
+      },
+      {
+      id: 'webofscience',
+      title: 'Web of Science',
+      description: '科睿唯安旗下的核心学术数据库，提供科学引文索引（SCI）等，用于检索高水平期刊论文和进行引文分析。',
+      shortDesc: '核心引文数据库。',
+      url: 'https://webofscience.clarivate.cn/wos/woscc/basic-search',
+      category: 'academic',
+      icon: '/icons/webofscience.webp',
+      },
+      {
+      id: 'cnki',
+      title: '中国知网',
+      description: '中国最大的学术资源库，收录海量的中文期刊论文、博硕士学位论文、会议论文、报纸等文献，是中文研究必备。',
+      shortDesc: '中文权威学术数据库。',
+      url: 'https://www.cnki.net/',
+      category: 'academic',
+      icon: '/icons/cnki.webp',
+      },
+      {
+      id: 'osf',
+      title: 'OSF',
+      description: '开放科学框架，一个用于支持研究项目协作、数据管理和成果预注册的平台，旨在提高研究的透明度和可重复性。',
+      shortDesc: '开放科学协作平台。',
+      url: 'https://osf.io/dashboard',
+      category: 'academic',
+      icon: '/icons/osf.webp',
+      },
+      {
+      id: 'researchgate',
+      title: 'ResearchGate',
+      description: '面向科研人员的社交网络平台，学者可以分享论文、提出问题、寻找合作者，并跟踪领域内的研究动态。',
+      shortDesc: '科研社交网络。',
+      url: 'https://www.researchgate.net/',
+      category: 'academic',
+      icon: '/icons/researchgate.webp',
+      },
+      {
+      id: 'las',
+      title: '中国科学院文献情报中心',
+      description: '提供中国科学院及国内外丰富的学术资源检索、全文传递、科技查新等服务，支持国家战略科技力量。',
+      shortDesc: '中科院学术资源门户。',
+      url: 'https://www.las.ac.cn/',
+      category: 'academic',
+      icon: '/icons/las.webp',
+      },
+      {
+      id: 'scidownload',
+      title: 'Sci-Hub 镜像',
+      description: '提供免费下载学术论文的镜像站点，通过输入论文DOI或URL即可获取全文，旨在打破知识获取的壁垒。',
+      shortDesc: '免费学术论文下载。',
+      url: 'https://www.scidownload.com/',
+      category: 'academic',
+      icon: '/icons/scidownload.webp',
+      },
+      {
+      id: 'researcherhome',
+      title: '科研者之家',
+      description: '为科研人员提供工具和服务的平台，包括期刊查询、AI工具、基金信息、绘图资源等，助力科研全过程。',
+      shortDesc: '科研综合服务平台。',
+      url: 'https://professional.home-for-researchers.com/#/',
+      category: 'academic',
+      icon: '/icons/researcherhome.webp',
+      },
+      {
+      id: 'libgen',
+      title: 'Library Genesis',
+      description: '著名的影子图书馆，提供海量的学术书籍、教科书、论文等电子资源的免费下载，涵盖多个学科领域。',
+      shortDesc: '电子书与文献资源库。',
+      url: 'https://libgen.li/',
+      category: 'academic',
+      icon: '/icons/libgen.webp',
+      },
   // 技术社区      
       {
       id: 'stackoverflow',
@@ -290,6 +385,15 @@ export const sites = [
       url: 'https://www.v2ex.com/',
       category: 'tech',
       icon: '/icons/v2ex.webp',
+      },
+      {
+      id: 'linuxdo',
+      title: 'Linux Do',
+      description: '中文 Linux 技术社区，专注于 Linux 系统、开源软件和运维开发技术的讨论与分享，氛围友好专业。',
+      shortDesc: 'Linux 技术社区。',
+      url: 'https://linux.do/',
+      category: 'tech',
+      icon: '/icons/linuxdo.webp',
       },
   // 学习平台      
       {
@@ -355,6 +459,155 @@ export const sites = [
       category: 'learning',
       icon: '/icons/leetcode.webp',
       },
+      {
+      id: 'itongzhuo_ielts',
+      title: '雅思备考平台',
+      description: '提供雅思考试资讯、备考策略、模拟练习和学习资源的平台，帮助考生系统性地准备雅思考试。',
+      shortDesc: '雅思考试学习资源。',
+      url: 'https://ielts.itongzhuo.com/',
+      category: 'learning',
+      icon: '/icons/itongzhuo-ielts.webp',
+      },
+  // 工具与效率      
+      {
+      id: 'byrnavi',
+      title: '北邮人导航',
+      description: '由北京邮电大学社区维护的综合性导航网站，包含学术、工具、生活、娱乐等各类实用链接，设计简洁高效。',
+      shortDesc: '综合性资源导航。',
+      url: 'https://byr-navi.com/',
+      category: 'tools',
+      icon: '/icons/byrnavi.webp',
+      },
+      {
+      id: 'yanwebtop',
+      title: '颜伟的导航',
+      description: '个人整理的资源导航页面，汇集了学术搜索、开发工具、设计资源等多个领域的实用网站链接。',
+      shortDesc: '个人资源导航页。',
+      url: 'https://yanweb.top/',
+      category: 'tools',
+      icon: '/icons/yanwebtop.webp',
+      },
+      {
+      id: 'latexstudio',
+      title: 'LaTeX 工作室',
+      description: '中文 LaTeX 资源社区，提供丰富的模板、教程、工具和问答，是学习和使用 LaTeX 进行科技排版的重要站点。',
+      shortDesc: 'LaTeX 资源与社区。',
+      url: 'https://www.latexstudio.net/',
+      category: 'tools',
+      icon: '/icons/latexstudio.webp',
+      },
+      {
+      id: 'vscodejs',
+      title: 'VS Code 中文网',
+      description: 'Visual Studio Code 编辑器的中文社区网站，提供软件下载、插件推荐、使用教程和最新资讯。',
+      shortDesc: 'VS Code 中文资源站。',
+      url: 'https://vscode.js.cn/',
+      category: 'tools',
+      icon: '/icons/vscodejs.webp',
+      },
+      {
+      id: 'pdffree',
+      title: 'PDF 处理工具',
+      description: '提供在线 PDF 编辑、转换、合并、分割等免费功能的网站，方便用户对 PDF 文档进行快速处理。',
+      shortDesc: '在线 PDF 工具集。',
+      url: 'https://pdffree.channel/',
+      category: 'tools',
+      icon: '/icons/pdffree.webp',
+      },
+      {
+      id: 'chongbuluo',
+      title: '虫部落快搜',
+      description: '聚合了众多搜索引擎和垂直搜索工具的导航页面，实现一站式快速搜索，涵盖学术、数据、图片、资源等多个维度。',
+      shortDesc: '聚合搜索工具站。',
+      url: 'https://search.chongbuluo.com/',
+      category: 'tools',
+      icon: '/icons/chongbuluo.webp',
+      },
+      {
+      id: '123pan',
+      title: '123 云盘',
+      description: '提供大容量免费云存储和高速上传下载服务的网盘，适合用于文件备份、分享和在线协作。',
+      shortDesc: '免费大容量网盘。',
+      url: 'https://www.123pan.com/',
+      category: 'tools',
+      icon: '/icons/123pan.webp',
+      },
+  // 社交与媒体      
+      {
+      id: 'linkedin',
+      title: 'LinkedIn',
+      description: '全球知名的职业社交平台，用于建立职业人脉、寻找工作机会、分享行业见解和进行商务交流。',
+      shortDesc: '职业社交网络。',
+      url: 'https://www.linkedin.com/feed/',
+      category: 'social',
+      icon: '/icons/linkedin.webp',
+      },
+      {
+      id: 'x',
+      title: 'X (Twitter)',
+      description: '全球性的社交媒体平台，以实时短消息和快速传播信息为特点，是获取新闻、追踪热点和连接社群的重要渠道。',
+      shortDesc: '社交媒体与资讯平台。',
+      url: 'https://x.com/home',
+      category: 'social',
+      icon: '/icons/x.webp',
+      },
+      {
+      id: 'weibo',
+      title: '微博',
+      description: '中国领先的社交媒体平台，提供公开的实时信息分享、讨论和传播，是了解社会热点和娱乐资讯的主要窗口。',
+      shortDesc: '中文社交媒体平台。',
+      url: 'https://weibo.com/',
+      category: 'social',
+      icon: '/icons/weibo.webp',
+      },
+      {
+      id: 'zhihu',
+      title: '知乎',
+      description: '中文互联网高质量的问答社区和创作者聚集的原创内容平台，用户分享彼此的知识、经验和见解。',
+      shortDesc: '问答与知识分享社区。',
+      url: 'https://www.zhihu.com/',
+      category: 'social',
+      icon: '/icons/zhihu.webp',
+      },
+  // 视频平台      
+      {
+      id: 'youtube',
+      title: 'YouTube',
+      description: '全球最大的视频分享网站，包含教育教程、科技评测、娱乐节目、音乐视频等海量内容，支持创作者上传和分享。',
+      shortDesc: '视频分享与观看平台。',
+      url: 'https://www.youtube.com/',
+      category: 'media',
+      icon: '/icons/youtube.webp',
+      },
+      {
+      id: 'bilibili',
+      title: '哔哩哔哩',
+      description: '中国领先的年轻人文化社区和视频平台，以弹幕互动为特色，内容涵盖动画、游戏、知识、生活、科技等多元领域。',
+      shortDesc: '弹幕视频社区。',
+      url: 'https://www.bilibili.com/',
+      category: 'media',
+      icon: '/icons/bilibili.webp',
+      },
+  // 设计资源      
+      {
+      id: 'iconfont',
+      title: 'IconFont',
+      description: '阿里巴巴矢量图标库，提供海量可缩放的矢量图标，支持下载、在线编辑和前端项目引用，是设计师和开发者的常用资源。',
+      shortDesc: '矢量图标库。',
+      url: 'https://www.iconfont.cn/',
+      category: 'design',
+      icon: '/icons/iconfont.webp',
+      },
+  // 生产力工具      
+      {
+      id: 'gmail',
+      title: 'Gmail',
+      description: '谷歌提供的免费电子邮件服务，集成于谷歌生态系统，以其强大的搜索功能、大容量存储和稳定性著称。',
+      shortDesc: '谷歌电子邮件服务。',
+      url: 'https://mail.google.com/',
+      category: 'productivity',
+      icon: '/icons/gmail.webp',
+      },
 ];
 /**
  * 搜索网站功能
@@ -385,12 +638,13 @@ export function sitesToHtml(sitesList) {
     const safeTitle = escapeHtml(site.title);
     const safeDesc = escapeHtml(site.shortDesc || site.description);
     const safeUrl = escapeHtml(site.url);
-    const safeIcon = escapeHtml(site.icon || '/images/default.svg');
+    // 根据网站ID生成图标路径，优先尝试SVG，如果不存在则使用PNG
+    const iconPath = `/icons/${site.id}.svg`;
     return `
       <div class="site-card" data-category="${site.category}">
         <a href="${safeUrl}" target="_blank" rel="noopener noreferrer">
           <div class="site-icon">
-            <img src="${safeIcon}" alt="${safeTitle}" loading="lazy" onerror="this.src='/images/default.svg'">
+            <img src="${iconPath}" alt="${safeTitle}" loading="lazy" onerror="this.onerror=null; this.src='/icons/${site.id}.png'; this.onerror=function(){this.src='/images/default.svg'}">
           </div>
           <div class="site-info">
             <h3>${safeTitle}</h3>
