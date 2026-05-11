@@ -107,7 +107,7 @@ export const sites = [
       url: 'https://jia-shun.wang/',
       category: 'studying',
       icon: '/icons/academic-homepage.svg',
-      },
+      },      
       {
       id: 'nav-homepage',
       title: '海之霸学术导航',
