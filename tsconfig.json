@@ -9,10 +9,6 @@
     "skipLibCheck": true,
     "strict": false,
     "moduleResolution": "bundler",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
     "types": ["astro/client"]
   }
 }

@@ -85,7 +85,7 @@ pnpm i
 # 浏览器实时看效果
 pnpm dev
 # 自动下载图标
-npx tsx .\icon-system\0icon.ts
+npx tsx ./icon-system/0icon.ts
 # 打包构建生成/dist目录
 pnpm build
 ```
@@ -112,7 +112,7 @@ AI提示词:
 github
 baidu.com
 谷歌
-具体按照以下样式生成，使用“JavaScript风格格式+单引号”，不要添加"icon字段"和"[]""    
+具体按照以下样式生成，使用“JavaScript风格格式+单引号”，不要添加"icon字段"和"[]""  
       {
       id: 'github',
       title: 'GitHub', 

@@ -1,3 +1,11 @@
+// # 安装依赖
+// pnpm i
+// # 浏览器实时看效果
+// pnpm dev
+// # 自动下载图标
+// npx tsx ./icon-system/0icon.ts
+// # 打包构建生成/dist目录
+// pnpm build
 /**
  * 网站分类列表
  * @type {Array<{id: string, name: string}>}
@@ -5,7 +13,7 @@
 export const categories = [
   {
     id: 'studying',
-    name: '个人站点', icon: '/icons/category/studying.svg',
+    name: '站长站点', icon: '/icons/category/studying.svg',
   },
   {
     id: 'opensource',
@@ -17,7 +25,27 @@ export const categories = [
   },
   {
     id: 'academic',
-    name: '学术研究', icon: '/icons/category/academic.svg',
+    name: '学术检索', icon: '/icons/category/academic.svg',
+  },
+  {
+    id: 'academic-team',
+    name: '学术团队', icon: '/icons/category/academic-team.svg',
+  },
+  {
+    id: 'academic-toolkit',
+    name: '学术代码工具包', icon: '/icons/category/academic-toolkit.svg',
+  },
+  {
+    id: 'academic-scholar',
+    name: '知名学者', icon: '/icons/category/academic-scholar.svg',
+  },
+  {
+    id: 'academic-institution',
+    name: '学术单位', icon: '/icons/category/academic-institution.svg',
+  },
+  {
+    id: 'academic-recruitment',
+    name: '学术招聘', icon: '/icons/category/academic-recruitment.svg',
   },
   {
     id: 'tech',
@@ -57,7 +85,7 @@ export const categories = [
  * @type {Array<{id: string, title: string, description: string, shortDesc: string, url: string, category: string}>}
  */
 export const sites = [
-  // 个人站点      
+  // 站长站点      
       {
       id: 'academic-homepage',
       title: "Jiashun Wang's Homepage",
@@ -66,15 +94,6 @@ export const sites = [
       url: 'https://jia-shun.wang/',
       category: 'studying',
       icon: '/icons/academic-homepage.webp',
-      },
-      {
-      id: 'nav-homepage',
-      title: '海之霸学术导航',
-      description: '专属导航页，这里汇聚了学术与技术所需的所有高效工具与资源链接。',
-      shortDesc: '学术与技术网站式收藏夹',
-      url: 'https://chum-bucket.site/',
-      category: 'studying',
-      icon: '/icons/nav-homepage.webp',
       },
       {
       id: 'JiashunWang-Blog',
@@ -168,7 +187,7 @@ export const sites = [
       category: 'pages',
       icon: '/icons/netlify.webp',
       },
-  // 学术研究      
+  // 学术检索      
       {
       id: 'arxiv',
       title: 'arXiv',
@@ -243,7 +262,7 @@ export const sites = [
       },
       {
       id: 'ablesci',
-      title: '研毕导航',
+      title: '科研通',
       description: '一个面向科研人员的导航网站，聚合了各类学术工具、数据库、期刊、软件等资源，旨在提高科研工作效率。',
       shortDesc: '科研资源导航站。',
       url: 'https://www.ablesci.com/',
@@ -252,8 +271,8 @@ export const sites = [
       },
       {
       id: 'ablesci_daohang',
-      title: '研毕学术导航',
-      description: '研毕网旗下的学术专用导航页面，深度整合了文献检索、数据库、学术工具等科研全流程所需的核心网站。',
+      title: '科研通学术导航',
+      description: '科研通网旗下的学术专用导航页面，深度整合了文献检索、数据库、学术工具等科研全流程所需的核心网站。',
       shortDesc: '深度学术资源导航。',
       url: 'https://www.ablesci.com/daohang',
       category: 'academic',
@@ -305,13 +324,13 @@ export const sites = [
       icon: '/icons/las.webp',
       },
       {
-      id: 'scidownload',
-      title: 'Sci-Hub 镜像',
-      description: '提供免费下载学术论文的镜像站点，通过输入论文DOI或URL即可获取全文，旨在打破知识获取的壁垒。',
-      shortDesc: '免费学术论文下载。',
-      url: 'https://www.scidownload.com/',
+      id: 'pdffree',
+      title: 'Z-Library 镜像',
+      description: '著名的免费电子书和学术论文下载平台，提供海量数字资源的免费获取，是 Z-Library 的可用镜像站点。',
+      shortDesc: '免费学术论文与电子书下载。',
+      url: 'https://pdffree.channel/',
       category: 'academic',
-      icon: '/icons/scidownload.webp',
+      icon: '/icons/pdffree.webp',
       },
       {
       id: 'researcherhome',
@@ -331,6 +350,20 @@ export const sites = [
       category: 'academic',
       icon: '/icons/libgen.webp',
       },
+  // 学术团队      
+      {
+      id: 'sail-team',
+      title: 'SAIL Subarctic-Arctic Interest League',
+      description: '由苟睿健博士领导的学术研究团队，专注于亚北极-北极地区的科学研究，涵盖海洋学、气候学、生态学等多个交叉学科领域。',
+      shortDesc: '苟睿健博士领导的亚北极-北极研究团队',
+      url: 'https://sail-gourj.mystrikingly.com/temp_file_9d5191dd-ecc0-4d75-856f-f6148cabb72e_pasted_text.txt',
+      category: 'academic-team',
+      icon: '/icons/sail-team.webp',
+      },
+  // 学术代码工具包（保留分类但暂不添加额外网站）
+  // 知名学者（保留分类但暂不添加额外网站）
+  // 学术单位（保留分类但暂不添加额外网站）
+  // 学术招聘（保留分类但暂不添加额外网站）
   // 技术社区      
       {
       id: 'stackoverflow',
@@ -506,15 +539,6 @@ export const sites = [
       icon: '/icons/vscodejs.webp',
       },
       {
-      id: 'pdffree',
-      title: 'PDF 处理工具',
-      description: '提供在线 PDF 编辑、转换、合并、分割等免费功能的网站，方便用户对 PDF 文档进行快速处理。',
-      shortDesc: '在线 PDF 工具集。',
-      url: 'https://pdffree.channel/',
-      category: 'tools',
-      icon: '/icons/pdffree.webp',
-      },
-      {
       id: 'chongbuluo',
       title: '虫部落快搜',
       description: '聚合了众多搜索引擎和垂直搜索工具的导航页面，实现一站式快速搜索，涵盖学术、数据、图片、资源等多个维度。',
@@ -638,7 +662,7 @@ export function sitesToHtml(sitesList) {
     const safeTitle = escapeHtml(site.title);
     const safeDesc = escapeHtml(site.shortDesc || site.description);
     const safeUrl = escapeHtml(site.url);
-    // 根据网站ID生成图标路径，优先尝试SVG，如果不存在则使用PNG
+    // 根据网站ID生成图标路径
     const iconPath = `/icons/${site.id}.svg`;
     return `
       <div class="site-card" data-category="${site.category}">
